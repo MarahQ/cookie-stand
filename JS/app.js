@@ -1,26 +1,26 @@
 let Profiles = document.getElementById('salesprofile');
 // Seattle
-const Seattle =  {
+const Seattle = {
   name: 'Seattle',
-  min:23 ,
+  min: 23,
 
-  max:65,
+  max: 65,
 
-  avg:6.3,
+  avg: 6.3,
 
   cookies: 0,
 
   total: 0,
 
-  hour:['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:'],
-  randomFun: function(){
+  hour: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
+  randomFun: function () {
 
-    this.cookies = Math.floor(Math.random() * (( this.max - this.min + 1) + this.min));
-    this.cookies = Math.floor(this.cookies * this.avg) ;
-    this.total = this.total + this.cookies ;
+    this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
+    this.cookies = Math.floor(this.cookies * this.avg);
+    this.total = this.total + this.cookies;
     return this.cookies;
   },
-  land: function(){
+  land: function () {
     let articleElement = document.createElement('article');
     Profiles.appendChild(articleElement);
 
@@ -31,7 +31,7 @@ const Seattle =  {
     let ulElement = document.createElement('ul');
     h2Element.appendChild(ulElement);
 
-    for(let i = 0; i <this.hour.length ; i++) {
+    for (let i = 0; i < this.hour.length; i++) {
       let liElement = document.createElement('li');
       liElement.textContent = this.hour[i] + ' ' + this.randomFun() + '  ' + 'cookies';
       ulElement.appendChild(liElement);
@@ -47,26 +47,26 @@ Seattle.land();
 
 // Tokyo
 
-const Tokyo =  {
+const Tokyo = {
   name: 'Tokyo',
-  min:3 ,
+  min: 3,
 
-  max:24,
+  max: 24,
 
-  avg:1.2,
+  avg: 1.2,
 
   cookies: 0,
 
   total: 0,
 
-  hour:['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:'],
-  randomFun: function(){
-    this.cookies = Math.floor(Math.random() * (( this.max - this.min + 1) + this.min));
-    this.cookies = Math.floor(this.cookies * this.avg) ;
-    this.total = this.total + this.cookies ;
+  hour: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
+  randomFun: function () {
+    this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
+    this.cookies = Math.floor(this.cookies * this.avg);
+    this.total = this.total + this.cookies;
     return this.cookies;
   },
-  land: function(){
+  land: function () {
     let articleElement = document.createElement('article');
     Profiles.appendChild(articleElement);
 
@@ -77,7 +77,7 @@ const Tokyo =  {
     let ulElement = document.createElement('ul');
     h2Element.appendChild(ulElement);
 
-    for(let i = 0; i <this.hour.length ; i++) {
+    for (let i = 0; i < this.hour.length; i++) {
       let liElement = document.createElement('li');
       liElement.textContent = this.hour[i] + ' ' + this.randomFun() + '  ' + 'cookies';
       ulElement.appendChild(liElement);
@@ -91,26 +91,26 @@ const Tokyo =  {
 
 // Dubai
 
-const Dubai =  {
+const Dubai = {
   name: 'Dubai',
-  min:11 ,
+  min: 11,
 
-  max:38,
+  max: 38,
 
-  avg:3.7,
+  avg: 3.7,
 
   cookies: 0,
 
   total: 0,
 
-  hour:['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:'],
-  randomFun: function(){
-    this.cookies = Math.floor(Math.random() * (( this.max - this.min + 1) + this.min));
-    this.cookies = Math.floor(this.cookies * this.avg) ;
-    this.total = this.total + this.cookies ;
+  hour: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
+  randomFun: function () {
+    this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
+    this.cookies = Math.floor(this.cookies * this.avg);
+    this.total = this.total + this.cookies;
     return this.cookies;
   },
-  land: function(){
+  land: function () {
     let articleElement = document.createElement('article');
     Profiles.appendChild(articleElement);
 
@@ -121,7 +121,7 @@ const Dubai =  {
     let ulElement = document.createElement('ul');
     h2Element.appendChild(ulElement);
 
-    for(let i = 0; i <this.hour.length ; i++) {
+    for (let i = 0; i < this.hour.length; i++) {
       let liElement = document.createElement('li');
       liElement.textContent = this.hour[i] + ' ' + this.randomFun() + '  ' + 'cookies';
       ulElement.appendChild(liElement);
@@ -136,26 +136,26 @@ const Dubai =  {
 
 // Paris
 
-const Paris =  {
+const Paris = {
   name: 'Paris',
-  min:20 ,
+  min: 20,
 
-  max:38,
+  max: 38,
 
-  avg:2.3,
+  avg: 2.3,
 
   cookies: 0,
 
   total: 0,
 
-  hour:['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:'],
-  randomFun: function(){
-    this.cookies = Math.floor(Math.random() * (( this.max - this.min + 1) + this.min));
-    this.cookies = Math.floor(this.cookies * this.avg) ;
-    this.total = this.total + this.cookies ;
+  hour: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
+  randomFun: function () {
+    this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
+    this.cookies = Math.floor(this.cookies * this.avg);
+    this.total = this.total + this.cookies;
     return this.cookies;
   },
-  land: function(){
+  land: function () {
     let articleElement = document.createElement('article');
     Profiles.appendChild(articleElement);
 
@@ -166,7 +166,7 @@ const Paris =  {
     let ulElement = document.createElement('ul');
     h2Element.appendChild(ulElement);
 
-    for(let i = 0; i <this.hour.length ; i++) {
+    for (let i = 0; i < this.hour.length; i++) {
       let liElement = document.createElement('li');
       liElement.textContent = this.hour[i] + ' ' + this.randomFun() + '  ' + 'cookies';
       ulElement.appendChild(liElement);
@@ -182,26 +182,26 @@ const Paris =  {
 
 // Lima
 
-const Lima =  {
+const Lima = {
   name: 'Lima',
-  min:2 ,
+  min: 2,
 
-  max:16,
+  max: 16,
 
-  avg:4.6,
+  avg: 4.6,
 
   cookies: 0,
 
   total: 0,
 
-  hour:['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:'],
-  randomFun: function(){
-    this.cookies = Math.floor(Math.random() * (( this.max - this.min + 1) + this.min));
-    this.cookies = Math.floor(this.cookies * this.avg) ;
-    this.total = this.total + this.cookies ;
+  hour: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
+  randomFun: function () {
+    this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
+    this.cookies = Math.floor(this.cookies * this.avg);
+    this.total = this.total + this.cookies;
     return this.cookies;
   },
-  land: function(){
+  land: function () {
     let articleElement = document.createElement('article');
     Profiles.appendChild(articleElement);
 
@@ -212,7 +212,7 @@ const Lima =  {
     let ulElement = document.createElement('ul');
     h2Element.appendChild(ulElement);
 
-    for(let i = 0; i <this.hour.length ; i++) {
+    for (let i = 0; i < this.hour.length; i++) {
       let liElement = document.createElement('li');
       liElement.textContent = this.hour[i] + ' ' + this.randomFun() + '  ' + 'cookies';
       ulElement.appendChild(liElement);
