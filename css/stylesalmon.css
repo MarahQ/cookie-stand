@@ -1,0 +1,20 @@
+body{
+    background: #fec89a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+text-align: left;
+padding: 10px;
+
+  }
+
+  .imagfesh{ position: relative;
+    left: 720px;
+    
+  }
+  .btn{
+    background-color:#e8e8e4;
+    border:#83c5be;
+    border-color: snow;
+    font-size: 25x;
+  }
+
