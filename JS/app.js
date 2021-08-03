@@ -8,7 +8,7 @@ const Seattle = {
 
   avg: 6.3,
 
-  cookies: 0,
+  cookies: [],
 
   total: 0,
 
@@ -55,7 +55,7 @@ const Tokyo = {
 
   avg: 1.2,
 
-  cookies: 0,
+  cookies: [],
 
   total: 0,
 
@@ -99,7 +99,7 @@ const Dubai = {
 
   avg: 3.7,
 
-  cookies: 0,
+  cookies: [],
 
   total: 0,
 
@@ -144,7 +144,7 @@ const Paris = {
 
   avg: 2.3,
 
-  cookies: 0,
+  cookies: [],
 
   total: 0,
 
@@ -190,7 +190,7 @@ const Lima = {
 
   avg: 4.6,
 
-  cookies: 0,
+  cookies: [],
 
   total: 0,
 
