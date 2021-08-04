@@ -1,4 +1,6 @@
 let Profiles = document.getElementById('salesprofile');
+let SalmonCookieBranches = document.getElementById("SalmonCookieBranches")
+console.log(SalmonCookieBranches);
 let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let all = [];
 let total = [];
@@ -56,7 +58,7 @@ tablefooter();
 
 function tableHeader() {
   let trElement = document.createElement('tr');
-  Profiles.appendChild(trElement);
+  Profiles.appendChild (trElement);
   hour.unshift('');
   hour.push('Daily total')
   for (let i = 0; i < hour.length; i++) {
@@ -88,4 +90,19 @@ function tablefooter() {
     thElement.textContent = TotalofTotal;
     trElement.appendChild(thElement)
   }
+}
+SalmonCookieBranches.addEventListener('submit', submitHandler);
+function submitHandler(event) {
+  event.preventDefult();
+  let branchName= event.target.branchName.value.split(',');
+  let minBranchCust = event.target.minBranchCust.value.split(',');
+  let maxBranchCust= event.target.maxBranchCust.value.split(',');
+  let AVG= event.target.AVG.value.split(',');
+  let feedBack= event.target.feedBack.checked;
+
+  let newBranch = new shop(branchName, minBranchCust, maxBranchCust, AVG, feedBack);
+  newBranch.randomFun();
+  newBranch.run();
+  console.log(new shop);
+
 }
