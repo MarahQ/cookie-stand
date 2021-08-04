@@ -2,28 +2,28 @@ let Profiles = document.getElementById('salesprofile');
 let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let all = [];
 let total = [];
-function shop(name, min, max, avg) {
-  this.name = name;
-  this.min = min;
-  this.max = max;
-  this.avg = avg;
+function shop(Storename, mincust, maxcust, avgcust) {
+  this.Storename = Storename;
+  this.mincust = mincust;
+  this.maxcust = maxcust;
+  this.avgcust = avgcust;
   this.cookies = [];
   this.total = [];
   this.hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
   all.push(this);
 }
 shop.prototype.randomFun = function () {
-  this.cookies = Math.floor(Math.random() * ((this.max - this.min + 1) + this.min));
-  this.cookies = Math.floor(this.cookies * this.avg);
+  this.cookies = Math.floor(Math.random() * ((this.maxcust - this.mincust + 1) + this.mincust));
+  this.cookies = Math.floor(this.cookies * this.avgcust);
   this.total = this.total + this.cookies;
   return this.cookies;
 }
-shop.prototype.land = function () {
+shop.prototype.run = function () {
   let trElement = document.createElement('tr');
   Profiles.appendChild(trElement);
 
   let thElement = document.createElement('th');
-  thElement.textContent = this.name;
+  thElement.textContent = this.Storename;
   trElement.appendChild(thElement);
 
   //let ulElement = document.createElement('ul');
@@ -47,11 +47,11 @@ let Lima = new shop('Lima', 2, 16, 4.6)
 
 console.log(all);
 tableHeader();
-Seattle.land();
-Tokyo.land();
-Dubai.land();
-Paris.land();
-Lima.land();
+Seattle.run();
+Tokyo.run();
+Dubai.run();
+Paris.run();
+Lima.run();
 tablefooter();
 
 function tableHeader() {
