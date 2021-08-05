@@ -10,12 +10,12 @@ function shop(Storename, mincust, maxcust, avgcust) {
   this.maxcust = maxcust;
   this.avgcust = avgcust;
   this.cookies = [];
-  this.total = [];
+  this.total = 0;
   this.hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
   all.push(this);
 }
 shop.prototype.randomFun = function () {
-  this.cookies = Math.floor(Math.random() * ((this.maxcust - this.mincust + 1) + this.mincust));
+  this.cookies.push.Math.floor(Math.random() * ((this.maxcust - this.mincust + 1) + this.mincust));
   this.cookies = Math.floor(this.cookies * this.avgcust);
   this.total = this.total + this.cookies;
   return this.cookies;
@@ -76,7 +76,7 @@ function tablefooter() {
   for (let i = 0; i < hour.length; i++) {
     let dailytotal = 0;
     for (let j = 0; j < all.length; j++) {
-      dailytotal += all[j].cookies[j]
+      dailytotal += all[j].cookies[i]
     }
     let thElement = document.createElement('th');
     thElement.textContent = dailytotal;
