@@ -4,7 +4,7 @@ let SalmonCookieBranches = document.getElementById("SalmonCookieBranches")
 console.log(SalmonCookieBranches);
 let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let all = [];
-let total = 0;
+let total = [];
 function shop(Storename, mincust, maxcust, avgcust) {
   this.Storename = Storename;
   this.mincust = mincust;
@@ -87,7 +87,7 @@ function tablefooter() {
       console.log(dailytotal);
     }
     let thElement = document.createElement('th');
-    thElement.textContent = 'total';
+    thElement.textContent = dailytotal;
     trElement.appendChild(thElement);
   }
   let TotalofTotal = 0;
@@ -98,6 +98,7 @@ function tablefooter() {
   totalElement.textContent = TotalofTotal;
   trElement.appendChild(totalElement)
 }
+
 SalmonCookieBranches.addEventListener('submit', submitHandler);
 function submitHandler(event) {
   event.preventDefault();
@@ -106,8 +107,9 @@ function submitHandler(event) {
   let maxBranchCust = event.target.maxBranchCust.value;
   let AVG = event.target.AVG.value;
   let feedBack = event.target.feedBack.checked;
-  Profiles.deletRow(-1);
   let newBranch = new shop(branchName, minBranchCust, maxBranchCust, AVG, feedBack);
-  newBranch.run();
-  tablefooter();
+   newBranch.run();
+   
 }
+ Profiles.deletRow(-1);
+  tablefooter();
